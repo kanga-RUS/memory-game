@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Memory</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="src/game.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="src/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container" data-tid="App">
+        <div class="start-game-window">
+            <img src="src/StartGame.png">
+            <div class="title">memory game</div>
+            <div class="btn btn-start" data-tid="NewGame-startGame">Начать игру</div>
+        </div>
+        <div class="game-window" data-tid="Deck">
+            <div class="menu">
+                <div class="btn-menu-start" data-tid="Menu-newGame">Начать заново</div>
+                <div class="menu-score" data-tid="Menu-scores">Очки: <span id="score">0</span></div>
+            </div>
+            <div class="deck">
+                <div class="card unmatched" data-tid="Card">
+                    <img src="src/Cards/back.png" class="back">
+                    <img src="" class="front">
+                </div>
+                <div class="card unmatched" data-tid="Card">
+                    <img src="src/Cards/back.png" class="back">
+                    <img src="" class="front">
+                </div>
+                <div class="card unmatched" data-tid="Card">
+                    <img src="src/Cards/back.png" class="back">
+                    <img src="" class="front">
+                </div>
+                <div class="card unmatched" data-tid="Card">
+                    <img src="src/Cards/back.png" class="back">
+                    <img src="" class="front">
+                </div>
+                <div class="card unmatched" data-tid="Card">
+                    <img src="src/Cards/back.png" class="back">
+                    <img src="" class="front">
+                </div>
+                <div class="card unmatched" data-tid="Card">
+                    <img src="src/Cards/back.png" class="back">
+                    <img src="" class="front">
+                </div>
+                <div class="card unmatched" data-tid="Card">
+                    <img src="src/Cards/back.png" class="back">
+                    <img src="" class="front">
+                </div>
+                <div class="card unmatched" data-tid="Card">
+                    <img src="src/Cards/back.png" class="back">
+                    <img src="" class="front">
+                </div>
+                <div class="card unmatched" data-tid="Card">
+                    <img src="src/Cards/back.png" class="back">
+                    <img src="" class="front">
+                </div>
+                <div class="card unmatched" data-tid="Card">
+                    <img src="src/Cards/back.png" class="back">
+                    <img src="" class="front">
+                </div>
+                <div class="card unmatched" data-tid="Card">
+                    <img src="src/Cards/back.png" class="back">
+                    <img src="" class="front">
+                </div>
+                <div class="card unmatched" data-tid="Card">
+                    <img src="src/Cards/back.png" class="back">
+                    <img src="" class="front">
+                </div>
+                <div class="card unmatched" data-tid="Card">
+                    <img src="src/Cards/back.png" class="back">
+                    <img src="" class="front">
+                </div>
+                <div class="card unmatched" data-tid="Card">
+                    <img src="src/Cards/back.png" class="back">
+                    <img src="" class="front">
+                </div>
+                <div class="card unmatched" data-tid="Card">
+                    <img src="src/Cards/back.png" class="back">
+                    <img src="" class="front">
+                </div>
+                <div class="card unmatched" data-tid="Card">
+                    <img src="src/Cards/back.png" class="back">
+                    <img src="" class="front">
+                </div>
+                <div class="card unmatched" data-tid="Card">
+                    <img src="src/Cards/back.png" class="back">
+                    <img src="" class="front">
+                </div>
+                <div class="card unmatched" data-tid="Card">
+                    <img src="src/Cards/back.png" class="back">
+                    <img src="" class="front">
+                </div>
+            </div>
+        </div>
+        <div class="end-game-window">
+            <img src="src/finish.png">
+            <div class="end-score">Поздравляем!</br> Ваш итоговый счет: <span id="full-score">0</span></div>
+            <div class="btn btn-end-start" data-tid="EndGame-retryGame">Еще раз</div>
+        </div>
+    </div>
+    <audio id="audio" src="src/applause.mp3" preload="auto">
+      Your browser does not support the audio element.
+    </audio>
+</body>
+<script>
+    $(document).ready(function($) {
+        $(".btn-start").game();
+    });
+</script>
+
+</html>
